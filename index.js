@@ -41,7 +41,7 @@ client.on('interactionCreate', async interaction => {
       });
     }
 
-    const members = voiceChannel.members.map(m => m.nickname || m.user.username);
+    const members = voiceChannel.members.map(m => m.displayName || m.user.username);
     if (members.length <= 1) {
       return interaction.reply({
         content: 'ボイスチャンネルにはあなた以外のメンバーがいません。',
